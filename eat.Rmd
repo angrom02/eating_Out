@@ -22,21 +22,23 @@ $H_A$ There is a statistical difference between at least two races with the freq
 
 
 ```{r include=FALSE,echo=FALSE}
-source(file="fisherXY.R")
+#source(file="fisherXY.R")
 require(tidyverse)
 require(tigerstats)
+require(haven) 
 require(knitr)
 require(foreign)
+#library(haven)
 ```
+
+
 ```{r, eval=FALSE}
-GSS <-read.dta(file="GSSxxxx.dta")
+
+GSS <-read_dta(file="GSS1998.dta")
 GSS <- droplevels(GSS)
 mydata <- select(GSS,race,age,eatout)
 mydata <- na.omit(mydata)
 ```
-
-
-
 
 
 
